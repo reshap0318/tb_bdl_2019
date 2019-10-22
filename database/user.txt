@@ -1,0 +1,3 @@
+admin :
+aldo,aldo
+admin_mesjid : randa,randa
