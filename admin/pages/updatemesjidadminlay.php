@@ -84,11 +84,12 @@
               $kategori=mysqli_query($conn,"select * from category_worship_place ");
               while($rowkategori = mysqli_fetch_assoc($kategori))
               {
-				   if ($data[id_category]==$rowkategori[id]){
-									echo "<option value=\"$rowkategori[id]\" selected>$rowkategori[name]</option>";}
-								else{
-									echo "<option value=\"$rowkategori[id]\">$rowkategori[name]</option>";}
-								}
+  				        if ($data['id_category']==$rowkategori['id']){
+  									echo '<option value="'.$rowkategori['id'].'" selected>'.$rowkategori['name'].'</option>';
+                  }
+  								else{
+  									echo '<option value="'.$rowkategori['id'].'">'.$rowkategori['name'].'</option>';}
+  								}
               }
               ?>
 

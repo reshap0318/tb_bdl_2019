@@ -1,6 +1,7 @@
 <?php
 require '../inc/connect.php';
-require $_SERVER['DOCUMENT_ROOT'].'t2-eng-mysql/geom_helper.php';
+require '../../geom_helper.php';
+require_once('../../assets/geoPHP/geoPHP.inc');
 $id=$_GET['id'];
 
 $sql="select *, ST_ASWKB(geom) AS wkb from worship_place where id = '$id'";

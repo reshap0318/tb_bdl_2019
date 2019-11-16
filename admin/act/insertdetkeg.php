@@ -9,8 +9,8 @@ $tgl = DateTime::createFromFormat('m-d-Y', $_POST['tgl'])->format('Y-m-d');
 $id = $_SESSION['id'];
 $ustad = $_POST['ustad'];
 $penyelenggara = $_POST['penyelenggara'];
-$sql = mysqli_query($conn,"insert into detail_event values ('$tgl','$jam', '$ustad','$keg','$id', '$penyelenggara')");
-echo "insert into detail_event values ('$tgl','$jam', '$ustad','$keg','$id', '$penyelenggara')";
+$sql = mysqli_query($conn,"insert into detail_event values ('$tgl','$jam','$id','$ustad','$keg', '$penyelenggara')");
+echo "insert into detail_event values ('$tgl','$jam', '$ustad','$keg','$id', '$penyelenggara')<br>";
 if ($sql){
 	echo "<script>
 		alert ('Data Successfully Added');

@@ -12,8 +12,8 @@ function initialize(){
     disableDefaultUI: true,
     zoomControl: true,
     mapTypeControl: true
-  }); 
-        
+  });
+
   //mencari lokasi dengan latlng
   var geocoder = new google.maps.Geocoder;
   var infowindow = new google.maps.InfoWindow;
@@ -21,7 +21,7 @@ function initialize(){
     setMapOnAll(null);
         geocodeLatLng(geocoder, map, infowindow);
     });
-    
+
     function geocodeLatLng(geocoder, map, infowindow) {
         var input = document.getElementById('latlng').value;
         var latlngStr = input.split(',', 2);
@@ -114,7 +114,7 @@ function initialize(){
         coor[i] = polygonBounds.getAt(i).lng() +' '+ polygonBounds.getAt(i).lat();
         str_input += polygonBounds.getAt(i).lng() +' '+ polygonBounds.getAt(i).lat() +',';
       }
-      str_input = str_input+''+coor[0]+')))';     
+      str_input = str_input+''+coor[0]+')))';
       $("#geom").val(str_input);
     }
     google.maps.event.addListener(newShape.getPath(), 'set_at', getCoordinate);
@@ -197,5 +197,5 @@ function resizingMap() {
    if(typeof map =="undefined") return;
    var center = map.getCenter();
    google.maps.event.trigger(map, "resize");
-   map.setCenter(center); 
+   map.setCenter(center);
 }

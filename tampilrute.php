@@ -15,7 +15,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 	unset($properties['geom']);
 	$feature = array(
 		 'type' => 'Feature',
-		 'geometry' => json_decode($row['wkb']),
+		 'geometry' => json_decode(wkb_to_json($row['wkb'])),
 		 'properties' => $properties
 	);
 	# Add feature arrays to feature collection array

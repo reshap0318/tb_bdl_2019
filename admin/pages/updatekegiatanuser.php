@@ -26,10 +26,10 @@
               while($rowkeg = mysqli_fetch_assoc($jenis))
               {
 
-			   if ($data[id_event]==$rowkeg[id]){
-									echo "<option value=\"$rowkeg[id]\" selected>$rowkeg[name]</option>";}
+			          if ($data['id_event']==$rowkeg['id']){
+									echo '<option value="'.$rowkeg['id'].'" selected>'.$rowkeg['name'].'</option>';}
 								else{
-									echo"<option value=\"$rowkeg[id]\">$rowkeg[name]</option>";}
+									echo '<option value="'.$rowkeg['id'].'">'.$rowkeg['name'].'</option>';}
 								}
               ?>
 
@@ -54,7 +54,7 @@
         <div class="form-group">
           <label class="col-sm-2 col-sm-2 control-label" for="tgl_keg"><span style="color:red"></span>Date</label>
           <div class="col-sm-10">
-          <input type="text" class="form-control form-control-inline input-medium default-date-picker" size="16" name="tgl_keg" value="<?php echo $data['date']?>">
+          <input type="text" class="form-control form-control-inline input-medium default-date-picker" size="16" name="tgl_keg" value="<?php $date=date_create($data['date']); echo date_format($date,"m-d-Y");?>">
           </div>
         </div>
         <div class="form-group">
@@ -66,10 +66,10 @@
               $ustad=mysqli_query($conn,"select * from ustad ");
               while($rowust = mysqli_fetch_assoc($ustad))
               {
-				  if ($data[id_ustad]==$rowust[id]){
-					   echo"<option value=\"$rowust[id]\" selected>$rowust[name]</option>";
+				  if ($data['id_ustad']==$rowust['id']){
+					   echo '<option value="'.$rowust['id'].'" selected>'.$rowust['name'].'</option>';
 				  }
-              echo"<option value=\"$rowust[id]\">$rowust[name]</option>";
+              echo '<option value="'.$rowust['id'].'">'.$rowust['name'].'</option>';
               }
               ?>
 

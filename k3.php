@@ -67,7 +67,7 @@
       if($ustad){
           $sql .= " and ustad.name like '%$ustad%'";
       }
-      
+
       if($query){
         die($sql);
       }

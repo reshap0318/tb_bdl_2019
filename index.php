@@ -512,6 +512,28 @@
                         <li class="sub-menu">
                           <a href="javascript:;" onclick="reset()">
                             <i class="fa fa-calendar"></i>
+                            <span>Fungsional Tambahan</span>
+                          </a>
+                          <ul class="sub">
+                            <div  class="panel-body" >
+                              <div class="form-group">
+                                <button type="button" class="btn btn-default btn-block" onclick="pinlocation()" name="button">Pin My Location</button>
+                              </div>
+                              <div class="form-group">
+                                <button type="button" onclick="firstloc()" class="btn btn-default btn-block" name="button">My First Location</button>
+                              </div>
+                              <div class="form-group">
+                                <button type="button" onclick="route_to_begin()" class="btn btn-default btn-block" name="button">Route To First <br> Location</button>
+                              </div>
+                                <button type="submit" class="btn btn-default" onclick='cari_f1d()'><i class="fa fa-search"></i></button>
+                            </div>
+                          </ul>
+                        </li>
+                      </ul>
+                      <ul class="sub">
+                        <li class="sub-menu">
+                          <a href="javascript:;" onclick="reset()">
+                            <i class="fa fa-calendar"></i>
                             <span>Fungsional 1</span>
                           </a>
                           <ul class="sub">
@@ -519,7 +541,7 @@
                               <div class="form-group">
                                 <label style="color:white;">Category</label>
                                 <select class="form-control" id="se-kategori-f1-re" >
-                                    <option value="">--Category--</option>
+                                  
                                     <?php
                                            include "connect.php";
                                             $result=  mysqli_query($conn,"select id as nilai, name as nama from category_worship_place order by nama ASC");
@@ -536,7 +558,6 @@
                               <div class="form-group">
                                 <label style="color:white;">Sub District</label>
                                 <select class="form-control" id="se-kecamatan-f1-re" >
-                                    <option value="">--Sub District--</option>
                                     <?php
                                            include "connect.php";
                                             $result=  mysqli_query($conn,"select id as nilai, name as nama from district order by nama ASC");
@@ -553,7 +574,6 @@
                               <div class="form-group">
                                 <label style="color:white;">Type Event</label>
                                 <select class="form-control" id="se-event-f1-re" >
-                                <option value="">--Type Event--</option>
                                     <?php
                                            include "connect.php";
                                             $result=  mysqli_query($conn,"SELECT * FROM `type_event`");
@@ -568,34 +588,6 @@
                                 <br>
                               </div>
                                 <button type="submit" class="btn btn-default" onclick='cari_f1re()'><i class="fa fa-search"></i></button>
-                            </div>
-                          </ul>
-                        </li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" onclick="reset();" >
-                        <i class="fa fa-tasks"></i>
-                        <span>Fungsional Tambahan</span>
-                      </a>
-                      <ul class="sub">
-                        <li class="sub-menu">
-                          <a href="javascript:;" onclick="reset()">
-                            <i class="fa fa-calendar"></i>
-                            <span>Fungsional 1</span>
-                          </a>
-                          <ul class="sub">
-                            <div  class="panel-body" >
-                              <div class="form-group">
-                                <button type="button" class="btn btn-default btn-block" onclick="pinlocation()" name="button">Pin My Location</button>
-                              </div>
-                              <div class="form-group">
-                                <button type="button" onclick="firstloc()" class="btn btn-default btn-block" name="button">My First Location</button>
-                              </div>
-                              <div class="form-group">
-                                <button type="button" onclick="route_to_begin()" class="btn btn-default btn-block" name="button">Route To First <br> Location</button>
-                              </div>
-                                <button type="submit" class="btn btn-default" onclick='cari_f1d()'><i class="fa fa-search"></i></button>
                             </div>
                           </ul>
                         </li>
