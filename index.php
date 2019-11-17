@@ -119,7 +119,7 @@
                   </li>
 
 
-                  <li class="sub-menu">
+                  <!-- <li class="sub-menu">
                       <a href="javascript:;" onclick="reset()" >
                           <i class="fa fa-cogs"></i>
                           <span>Sub-District</span>
@@ -161,7 +161,7 @@
                                 <br>
                                 <button type="submit" class="btn btn-default" id="carikategori"  value="cari" onclick='carikategori()'><i class="fa fa-search"></i></button>
                       </ul>
-                  </li>
+                  </li> -->
                    <li class="sub-menu">
                       <a href="javascript:;" onclick="reset()">
                           <i class="fa fa-filter"></i>
@@ -541,7 +541,7 @@
                               <div class="form-group">
                                 <label style="color:white;">Category</label>
                                 <select class="form-control" id="se-kategori-f1-re" >
-                                  
+
                                     <?php
                                            include "connect.php";
                                             $result=  mysqli_query($conn,"select id as nilai, name as nama from category_worship_place order by nama ASC");
